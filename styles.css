@@ -1,0 +1,133 @@
+.box {
+    display: block;
+    margin: 60px auto;
+    border-radius: 10px;
+    padding: 25px 20px;
+    max-width: 600px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    background-color: rgb(255, 255, 255);
+}
+
+body {
+    background-color: #f9f7fe;
+}
+
+input[type="search"] {
+    border-radius: 5px;
+    padding: 20px 10px;
+    font-size: 16px;
+    border: none;
+    width: 75%;
+    margin-top: 15px;
+    background-color: #f9f7fe;
+    text-align: left;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+input[type="search"]:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+input[type="submit"] {
+    padding: 20px;
+    margin-left: 6px;
+    border-radius: 5px;
+    border: none;
+    background-color: #885df1;
+    color: #fff;
+    font-size: 16px;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    cursor: pointer;
+}
+
+header {
+    padding-bottom: 30px;
+    border-bottom: #f9f7fe solid 1px;
+}
+
+div.current-weather {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+div h1 {
+    font-size: 38px;
+    font-weight: 900px;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.weather-icon {
+    width: 88px;
+    height: 88px;
+    top: 20px;
+}
+
+.current-weather.temperature {
+    font-size: 30px;
+    font-weight: 200;
+    margin-top: 50px;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    line-height: 98px;
+}
+
+div span.degrees {
+    font-weight: 900;
+    font-size: 85px;
+}
+
+.celsius {
+    position: relative;
+    top: -20px;
+}
+
+main div div p {
+    color: #a9a6b3;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.real-time {
+    color: #a9a6b3;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+p strong {
+    color: #f65282;
+    font-weight: 700;
+}
+
+footer {
+    border-top: #f9f7fe solid 1px;
+    padding-top: 20px;
+    text-align: center;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+footer p {
+    color: #a9a6b3;
+    font-size: 16px;
+}
+
+footer p a {
+    cursor: pointer;
+    color: #885df1;
+}
