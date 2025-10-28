@@ -74,7 +74,7 @@ div h1 {
 .current-weather.temperature {
     font-size: 30px;
     font-weight: 200;
-    margin-top: 50px;
+    margin-top: 20px;
     font-family: "Outfit", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
@@ -114,11 +114,11 @@ p strong {
 
 .weather-forecast {
     display: flex;
-    justify-content: space-around;
-    margin-top: 30px;
-    
-
+    justify-content:center;
+    margin-top: 10px;
 }
+
+
 .weather-forecast-date {
     text-align: center;
     color: rgba(39,33,66, 0.4);
@@ -128,9 +128,10 @@ p strong {
 }
 
 .weather-forecast-icon {
-    font-size: 38px;
-    text-align: center;
-
+        width: 88px;
+        height: 88px;
+        display: block;
+        margin: 0 auto;
 }
 
 .weather-forecast-temperatures {
@@ -142,7 +143,13 @@ p strong {
 }
 
 .weather-forecast-temp {
-    padding: 0 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.weather-forecast-day {
+    padding: 10px;
+    display: block;
 }
 
 footer {
