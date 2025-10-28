@@ -14,6 +14,7 @@ function currentTime(){
 let time = document.querySelector(".search-button");
 time.addEventListener("click", currentTime);
 
+
 function displayWeather(response) {
     let heading = document.querySelector(".current-city");
     heading.innerHTML = response.data.city;
@@ -29,6 +30,9 @@ function displayWeather(response) {
     let iconElement= document.querySelector("#icon");
     iconElement.innerHTML = `<img src="${response.data.condition.icon_url}"
 							class="weather-icon"></img>`
+    getForecast(response.data.city);
+    
+    
 }
 
 function handleSearch(event){
@@ -42,21 +46,26 @@ function handleSearch(event){
 }
 
 /////////////////////////FORECAST//////////////////////////////////////////
-function displayForecast() {
+function getForecast(city) {
+let apiKey = "cb4b5c34a3d226503of16c3598tb1fa5";
+let apiUrl= `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+axios.get(apiUrl).then(displayForecast);
+}
 
+function displayForecast(response) {
     
     let days = ['Tue', 'Wed', 'Thur', 'Fri', 'Sat', 'Sun'];
     let forecastHTML = "";
     days.forEach(function(day){
     forecastHTML = forecastHTML +
     `<div class="weather-forecast-day">
-					            <div class="weather-forecast-date">${day}</div>
-					            <div class="weather-forecast-icon">☀</div>
-					            <div class="weather-forecast-temperatures">
-						            <div class="weather-forecast-temp"><strong>15&deg;</strong></div>
-						            <div class="weather-forecast-temp"> 18&deg;</div>
-					            </div>
-                            </div>`;
+		<div class="weather-forecast-date">${day}</div>
+		<div class="weather-forecast-icon">☀</div>
+		<div class="weather-forecast-temperatures">
+			<div class="weather-forecast-temp"><strong>15&deg;</strong></div>
+			<div class="weather-forecast-temp"> 9&deg;</div>
+		</div>
+    </div>`;
                     
     });
     let forecastElement = document.querySelector("#forecast");
@@ -65,7 +74,7 @@ function displayForecast() {
 
 let citySearch = document.querySelector("form");
 citySearch.addEventListener("submit", handleSearch);
-displayForecast();
+
 
 
 				
